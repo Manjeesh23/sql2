@@ -8,6 +8,11 @@
       "executor-zip": "https://downloads.mesosphere.com/dcos-commons/artifacts/0.42.1/executor.zip",
       "scheduler-zip": "https://ecosystem-repo.s3.amazonaws.com/sdk/artifacts/0.42.1/operator-scheduler.zip",
       "svc": "http://minio.marathon.l4lb.thisdcos.directory:9000/artifacts/sql/svc.yml"
+    },
+    "container": {
+     "docker": {
+        "sqlcluster": "microsoft/mssql-server-linux:2017-latest"
+      }
     }
   },
   "images": {
