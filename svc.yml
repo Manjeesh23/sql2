@@ -12,6 +12,7 @@ pods:
       {{VIRTUAL_NETWORK_NAME}}:
         labels: {{VIRTUAL_NETWORK_PLUGIN_LABELS}}
     {{/ENABLE_VIRTUAL_NETWORK}}
+    image: {{SQLCLUSTER_IMAGE}}
     tasks:
       node:
         goal: RUNNING
