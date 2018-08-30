@@ -12,6 +12,17 @@ pods:
       {{VIRTUAL_NETWORK_NAME}}:
         labels: {{VIRTUAL_NETWORK_PLUGIN_LABELS}}
     {{/ENABLE_VIRTUAL_NETWORK}}
+    resource-sets:
+      init-resources:
+        cpus: {{NODE_CPUS}}
+        memory: {{NODE_MEM}}
+        ports:
+            db-port:
+              port: 0
+              advertise: true
+              vip:
+                prefix: db
+                port: {{NODE_PORT}}
     image: {{SQLCLUSTER_IMAGE}}
     tasks:
       node:
