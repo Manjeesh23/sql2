@@ -125,8 +125,7 @@
             "MOUNT"
           ],
           "default": "ROOT"
-        }
-        
+        },
          "port": {
           "description": "Port for broker to listen on",
           "type": "integer",
