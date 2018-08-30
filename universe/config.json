@@ -126,6 +126,13 @@
           ],
           "default": "ROOT"
         }
+        
+         "port": {
+          "description": "Port for broker to listen on",
+          "type": "integer",
+          "default": 1433
+        }
+      
       },
       "required": [
         "count",
