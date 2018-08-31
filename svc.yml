@@ -6,8 +6,6 @@ scheduler:
 pods:
   sql:
     count: {{NODE_COUNT}}
-    uris:
-      - {{BOOTSTRAP_URI}}
     placement: '{{{NODE_PLACEMENT}}}'
     {{#ENABLE_VIRTUAL_NETWORK}}
     networks:
@@ -29,9 +27,7 @@ pods:
     tasks:
       node:
         goal: RUNNING
-        cmd: |
-             ./bootstrap
-             "echo sql >> sql-container-path/output && sleep $SLEEP_DURATION"
+        cmd: "echo sql >> sql-container-path/output && sleep $SLEEP_DURATION"
         cpus: {{NODE_CPUS}}
         memory: {{NODE_MEM}}
         volume:
