@@ -36,3 +36,5 @@ pods:
           size: {{NODE_DISK}}
         env:
           SLEEP_DURATION: {{SLEEP_DURATION}}
+          ACCEPT_EULA: "Y"
+          SA_PASSWORD: "Tcs@2018"
