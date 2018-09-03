@@ -22,7 +22,7 @@ pods:
               advertise: true
               vip:
                 prefix: db
-                port: {{NODE_PORT}}
+                port: 1433
     image: {{SQLCLUSTER_IMAGE}}
     tasks:
       node:
