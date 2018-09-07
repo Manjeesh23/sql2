@@ -23,7 +23,6 @@ pods:
               vip:
                 prefix: db
                 port = 0
-    image: {{SQLCLUSTER_IMAGE}}
     tasks:
       node:
         goal: RUNNING
