@@ -22,7 +22,7 @@ pods:
               advertise: true
               vip:
                 prefix: db
-                tcpport = 1433
+                port = 1433
     image: {{SQLCLUSTER_IMAGE}}
     tasks:
       node:
