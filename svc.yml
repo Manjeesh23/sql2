@@ -22,12 +22,12 @@ pods:
               advertise: true
               vip:
                 prefix: db
-                port = 0
+                port = 1433
     tasks:
       node:
         goal: RUNNING
-        cmd: "echo sql >> sql-container-path/output && sleep $SLEEP_DURATION"
-              /opt/mssql/bin/sqlservr
+        cmd: echo "sql >> sql-container-path/output && sleep $SLEEP_DURATION"
+             /opt/mssql/bin/sqlservr
               sleep 1000s
         cpus: {{NODE_CPUS}}
         memory: {{NODE_MEM}}
