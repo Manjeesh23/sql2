@@ -10,8 +10,7 @@ pods:
     {{#ENABLE_VIRTUAL_NETWORK}}
     networks:
       {{VIRTUAL_NETWORK_NAME}}:
-       ipaddress = 0.0.0.0
-        labels: {{VIRTUAL_NETWORK_PLUGIN_LABELS}}
+      labels: {{VIRTUAL_NETWORK_PLUGIN_LABELS}}
     {{/ENABLE_VIRTUAL_NETWORK}}
     resource-sets:
       init-resources:
