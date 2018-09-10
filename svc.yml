@@ -28,7 +28,7 @@ pods:
         goal: RUNNING
         cmd: echo "sql >> sql-container-path/output && sleep $SLEEP_DURATION"
                   "/opt/mssql/bin/sqlservr"
-                  sleep 1000s
+                   sleep 1000s
         cpus: {{NODE_CPUS}}
         memory: {{NODE_MEM}}
         volume:
@@ -37,6 +37,7 @@ pods:
           size: {{NODE_DISK}}
         env:
           SLEEP_DURATION: {{SLEEP_DURATION}}
-          accepteula = "Y"
+          ACCEPT_EULA= "Y"
+          SA_PASSWORD= "Ganesha!5"
           
           
