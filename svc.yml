@@ -28,10 +28,7 @@ pods:
         goal: RUNNING
         cmd: echo "sql >> sql-container-path/output && sleep $SLEEP_DURATION"
                   "/opt/mssql/bin/sqlservr"
-                  "exec -it gifted_shockley "bash""
                   "/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Ganesha!5'"
-                   
-
                    sleep 1000s
         cpus: {{NODE_CPUS}}
         memory: {{NODE_MEM}}
